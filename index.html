@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'cinema-dark': '#0a0a0a',
+              'cinema-darker': '#050505',
+              'cinema-red': '#dc2626',
+              'cinema-red-dark': '#991b1b',
+              'cinema-red-light': '#f87171',
+              'cinema-gray': '#1a1a1a',
+              'cinema-gray-light': '#2a2a2a',
+              'cinema-accent': '#8b5cf6',
+              'cinema-gold': '#fbbf24'
+            },
+            backgroundImage: {
+              'cinema-gradient': 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%)',
+              'cinema-card': 'linear-gradient(145deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%)',
+              'cinema-glass': 'linear-gradient(145deg, rgba(220, 38, 38, 0.1) 0%, rgba(26, 26, 26, 0.8) 100%)'
+            },
+            backdropBlur: {
+              'xs': '2px',
+            },
+            animation: {
+              'glow': 'glow 2s ease-in-out infinite alternate',
+              'float': 'float 3s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes glow {
+        from { box-shadow: 0 0 20px rgba(220, 38, 38, 0.3); }
+        to { box-shadow: 0 0 30px rgba(220, 38, 38, 0.6), 0 0 40px rgba(220, 38, 38, 0.4); }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      .glass-effect {
+        background: rgba(26, 26, 26, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(220, 38, 38, 0.2);
+      }
+    </style>
+    <title>CineFlix - Descubre el Cine</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
